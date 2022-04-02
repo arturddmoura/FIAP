@@ -35,6 +35,6 @@ if categoria.upper() == "PRIMEIRA CLASSE" and viajantes >= 4:
     valorliquido = valorbruto - (float(valorbruto) * 0.20)
 
 print(f"O valor bruto da viagem é de: R$ {valorbruto}. ")
-print(f"O valor do desconto é de: {valorbruto - valorliquido}. ")
-print(f"O valor liquido da viagem é de: {valorliquido}. ")
-print(f"O valor por viajante é de {valorliquido / viajantes}. ")
+print(f"O valor do desconto é de: R$ {valorbruto - valorliquido}. ")
+print(f"O valor liquido da viagem é de: R$ {valorliquido}. ")
+print(f"O valor por viajante é de R$ {valorliquido / viajantes}. ")
