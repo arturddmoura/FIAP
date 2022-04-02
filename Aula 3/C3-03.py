@@ -7,8 +7,10 @@ while proximo != valorinserido:
     proximo = proximo + anterior
     anterior = proximo - anterior
 
-if proximo == valorinserido:
-    print("Você venceu!")
-    
-else:
-    print("Você perdeu. Tente novamente!")
+    if proximo == valorinserido:
+        print("Você venceu!")
+        break   
+
+    if proximo >= valorinserido:
+        print("Você perdeu. Tente novamente.")
+        break
