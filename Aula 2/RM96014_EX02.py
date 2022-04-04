@@ -1,48 +1,38 @@
 segunda = int(input("Quantos votos segunda-feira recebeu? "))
-maior = segunda
-
 terca = int(input("Quantos votos terça-feira recebeu? "))
-if maior < terca:
-    maior = terca
-
 quarta = int(input("Quantos votos quarta-feira recebeu? "))
-if maior < quarta:
-    maior = quarta
-
 quinta = int(input("Quantos votos quinta-feira recebeu? "))
-if maior < quinta:
-    maior = quinta
-
 sexta = int(input("Quantos votos sexta-feira recebeu? "))
-if maior < sexta:
-    maior = sexta
 
-empate = 0
-if maior == segunda:
-    empate = empate + 1
-    
-if maior == terca:
-    empate = empate + 1
+if segunda > terca:
+    if segunda > quarta:
+        if segunda > quinta:
+            if segunda > sexta:
+                print(f"O dia escolhido foi segunda-feira, com {segunda} votos.")
 
-if maior == quarta:
-    empate = empate + 1
+elif terca > segunda:
+    if terca > quarta:
+        if terca > quinta:
+            if terca > sexta:
+                print(f"O dia escolhido foi terça-feira, com {terca} votos.")
 
-if maior == quinta:
-    empate = empate + 1
+elif quarta > terca:
+    if quarta > segunda:
+        if quarta > quinta:
+            if quarta > sexta:
+                print(f"O dia escolhido foi quarta-feira, com {quarta} votos.")
 
-if maior == sexta:
-    empate = empate + 1
+elif quinta > terca:
+    if quinta > quarta:
+        if quinta > segunda:
+            if quinta > sexta:
+                print(f"O dia escolhido foi quinta-feira, com {quinta} votos.")
 
-if maior == segunda and empate == 1:
-    print(f"O dia escolhido foi segunda-feira, com {maior} votos.")
-if maior == terca and empate == 1:
-    print(f"O dia escolhido foi terça-feira, com {maior} votos.")
-if maior == quarta and empate == 1:
-    print(f"O dia escolhido foi quarta-feira, com {maior} votos.")
-if maior == quinta and empate == 1:
-    print(f"O dia escolhido foi quinta-feira, com {maior} votos.")
-if maior == sexta and empate == 1:
-    print(f"O dia escolhido foi sexta-feira, com {maior} votos.")
+elif sexta > terca:
+    if sexta > quarta:
+        if sexta > quinta:
+            if sexta > segunda:
+                print(f"O dia escolhido foi sexta-feira, com {sexta} votos.")
 
-if empate != 1:
+else:
     print(f"Houve um empate!")
