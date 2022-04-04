@@ -3,7 +3,7 @@
 number = int(input("Please enter 1, 2 or 3: "))
 
 if number == 1 or number == 3:
-    print("Correct.")
+    print("Thank you.")
 
 elif number == 2:
     print("Well done.")
