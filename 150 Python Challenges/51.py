@@ -10,7 +10,7 @@ print(
     """
 )
 while gbwall > 0:
-    answer = int(input("How many bottles will be hanging on the wall? "))
+    answer = int(input("And if 1 green bottle should accidentally fall...\nHow many bottles will be hanging on the wall? "))
 
     if answer == gbwall - 1:
         gbwall = gbwall - 1
