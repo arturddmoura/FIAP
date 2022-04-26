@@ -46,8 +46,6 @@ while rodando == True:
             lista_ano[i] = float(lista_ano[i])
             lista_pontuação[i] = lista_pontuação[i] + lista_ano[i]
 
-        print(lista_pontuação)
-
         lista_sorted = sorted(lista_pontuação, reverse = True)
 
         for i in range(0, len(lista_nomes)):
