@@ -1,4 +1,4 @@
-opções_validas = ["senha", "ajuda da senha", "número do telefone", "nomes", "email", "usuário"]
+#opções_validas = ["senha", "ajuda da senha", "número do telefone", "nomes", "email", "usuário"]
 lista_nomes = ["Adobe", "Apollo", "Canva", "PDL", "Hurb"]
 lista_ano = [10/2013, 7/2018, 5/2019, 10/2019, 3/2019]
 lista_vazados =["email, dica de senha, senha, usuário", "email, telefone, nome", 
