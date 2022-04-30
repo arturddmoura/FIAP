@@ -1,9 +1,9 @@
 #opções_validas = ["senha", "ajuda da senha", "número do telefone", "nomes", "email", "usuário"]
 lista_nomes = ["Adobe", "Apollo", "Canva", "PDL", "Hurb"]
 lista_ano = [10/2013, 7/2018, 5/2019, 10/2019, 3/2019]
-lista_vazados = ["email, dica de senha, senha, usuário", "email, telefone, nome", 
-"email, nome, senha, usuário", "email, nome, telefone", "email, nome, senha, telefone"]
-lista_pontuação = [0, 0, 0, 0, 0]
+lista_vazados = ["email, dica de senha, senha", "email, telefone, nome", 
+"email, nome, senha", "email, nome, telefone", "email, nome, senha, telefone"]
+lista_pontuação = [10000, 10000, 10000, 10000, 10000]
 
 lista_sorted = []
 lista_resultados = []
@@ -29,23 +29,32 @@ while rodando == True:
     if menu_opção == 2:
         for i in range (0, len(lista_nomes)):
             if "senha" in lista_vazados[i]:
-                lista_pontuação[i] = lista_pontuação[i] + 1000
+                lista_pontuação[i] = lista_pontuação[i] - 10000
+
+                j = lista_pontuação.index(lista_pontuação[i])
+                lista_vazados.remove[lista_pontuação[j]]
+
             if "ajuda de senha" in lista_vazados[i]:
-                lista_pontuação[i] = lista_pontuação[i] + 750
-            if "usuário" in lista_vazados[i]:
-                lista_pontuação[i] = lista_pontuação[i] + 500
-            if "nome" in lista_vazados[i]:
-                lista_pontuação[i] = lista_pontuação[i] + 400
+                lista_pontuação[i] = lista_pontuação[i] - 400
             if "telefone" in lista_vazados[i]:
-                lista_pontuação[i] = lista_pontuação[i] + 300
+                lista_pontuação[i] = lista_pontuação[i] - 300
+            if "nome" in lista_vazados[i]:
+                lista_pontuação[i] = lista_pontuação[i] - 200
             if "email" in lista_vazados[i]:
-                lista_pontuação[i] = lista_pontuação[i] + 200
+                lista_pontuação[i] = lista_pontuação[i] - 100
+        print(lista_pontuação)
 
         for i in range (0, len(lista_ano)):
-            lista_ano[i] = float(lista_ano[i])
-            lista_pontuação[i] = lista_pontuação[i] + lista_ano[i]
+            #lista_ano[i] = float(lista_ano[i])
+            lista_pontuação[i] = lista_pontuação[i] + (lista_ano[i] * 100000)
+        print(lista_pontuação)
 
-        lista_sorted = sorted(lista_pontuação, reverse = True)
+        #lista_sorted = sorted(lista_pontuação, reverse = True)
+        for i in range (0, len(lista_pontuação)):
+            lista_sorted.append(lista_pontuação[i])
+
+        lista_sorted.sort()
+        #lista_sorted.reverse()
 
         for i in range(0, len(lista_nomes)):
             j = lista_pontuação.index(lista_sorted[i])
